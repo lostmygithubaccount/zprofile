@@ -4,6 +4,7 @@ export PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/
 #export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/python@3.10/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 
 # fine
 export EDITOR='vi'
@@ -46,7 +47,7 @@ alias examples="ex"
 alias pp="cd ~/code/azureml-docs/azureml-previews"
 alias previews="pp"
 alias docs="cd ~/code/azureml-docs/azure-docs-pr/articles/machine-learning"
-alias sdk2="cd ~/code/sdk-cli-v2"
+alias sdk2="cd ~/code/azureml-src/sdk-cli-v2"
 alias sdkv2="sdk2"
 alias rest2="cd ~/code/azureml-src/vienna"
 alias specs="cd ~/code/azureml-specs/"
