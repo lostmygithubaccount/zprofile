@@ -53,6 +53,8 @@ alias rest2="cd ~/code/azureml-src/vienna"
 alias specs="cd ~/code/azureml-specs/"
 alias spec="specs"
 alias ghp="cd ~/code/lostmygithubaccount/"
+alias readme="cd ~/code/lostmygithubaccount/lostmygithubaccount"
+alias dkdcai="cd ~/code/lostmygithubaccount/lostmygithubaccount"
 
 # more project access
 alias spec-main="cd ~/code/azureml-specs/azureml_run_specification"
