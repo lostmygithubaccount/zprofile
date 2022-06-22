@@ -42,14 +42,13 @@ alias files="cd ~/files"
 # python stuff
 alias venv="python -m venv"
 alias venvs="cd ~/venvs"
-alias main="source ~/venvs/main/bin/activate"
 alias off="deactivate"
-alias dkdc="conda activate dkdc"
-#alias python="/usr/local/opt/python@3.9/bin/python3"
-#alias pip="/usr/local/opt/python@3.9/bin/pip3"
+alias main="source ~/venvs/main/bin/activate"
 alias python="python3"
 alias pip="pip3"
 alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+#alias python="/usr/local/opt/python@3.9/bin/python3"
+#alias pip="/usr/local/opt/python@3.9/bin/pip3"
 
 # work
 export ORG="dbt-labs"
