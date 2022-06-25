@@ -16,6 +16,7 @@ alias tt='tree -L 2 -aFC'
 alias ttt='tree -L 3 -aFC'
 alias ls='ls -1pG -a'
 
+
 # navigation
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -27,6 +28,7 @@ alias update='source ~/.zprofile'
 
 # make life easier 
 alias du='du -h -d1 .'
+alias loc='find . | xargs wc -l'
 alias yt='youtube-dl'
 alias lg='vi ~/log.md'
 alias catlg='cat ~/log.md'
@@ -51,7 +53,7 @@ alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_inst
 #alias pip="/usr/local/opt/python@3.9/bin/pip3"
 
 # work
-export ORG="dbt-labs"
+export org="dbt-labs"
 
 # docker stuff
 alias dit="docker run -it --rm"
