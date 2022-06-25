@@ -16,7 +16,6 @@ alias tt='tree -L 2 -aFC'
 alias ttt='tree -L 3 -aFC'
 alias ls='ls -1pG -a'
 
-
 # navigation
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -54,6 +53,7 @@ alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_inst
 
 # work
 export org="dbt-labs"
+export ORG=$org
 
 # docker stuff
 alias dit="docker run -it --rm"
