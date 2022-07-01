@@ -15,6 +15,9 @@ export ORG=$org
 export pi_user="cody"
 export pi_ip="192.168.1.13"
 
+# vscode annoyance
+alias exit="exit 0"
+
 # time savers 
 alias v="vi"
 alias l="less"
@@ -30,7 +33,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # quick mafs 
-alias ali="code ~/.zprofile"
+alias ali="vi ~/.zprofile"
 alias update="source ~/.zprofile"
 
 # make life easier 
