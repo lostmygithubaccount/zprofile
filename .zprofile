@@ -3,6 +3,14 @@ export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PA
 export PATH="/opt/homebrew/bin:$PATH" # homebrew stuff
 export PATH="/Users/cody/.local/bin:$PATH" # virtualenv
 export PATH="/Users/cody/Library/Python/3.8/bin:$PATH" # pipx
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH" # psql and whatnot
+export PATH="/Applications/SnowSQL.app/Contents/MacOS:$PATH" # snowsql
+
+# temp/to move
+alias snowsql="snowsql --authenticator externalbrowser > out.txt"
+alias snowsqlcsv="snowsql --authenticator externalbrowser -o output_format=csv > out.csv"
+#alias snowsql="snowsql > out.txt"
+#alias snowsqlcsv="snowsql -o output_format=csv > out.csv"
 
 # fine
 export EDITOR="vi"
@@ -34,11 +42,12 @@ alias ....="cd ../../.."
 
 # quick mafs 
 alias ali="vi ~/.zprofile"
-alias update="source ~/.zprofile"
+alias update="source ~/.zprofile && git config --global core.excludesfile ~/.gitignore"
+alias gitignore="vi ~/.gitignore"
 
 # make life easier 
-alias du="du -h -d1 ."
-alias loc="( find . -name '*' -print0 | xargs -0 cat ) | wc -l"
+alias du="du -h -d1"
+alias loc="cloc ."
 alias find="find . -name"
 
 # notes
@@ -47,11 +56,14 @@ alias notesc="code ~/notes"
 
 # quick project access
 alias desk="cd ~/Desktop"
-alias docs="cd ~/Documents"
+alias docu="cd ~/Documents"
 alias down="cd ~/Downloads"
 alias files="cd ~/files"
 alias other="cd ~/other"
 alias venvs="cd ~/venvs"
+alias core="cd ~/files/dbt-core"
+alias work="cd ~/files/work"
+alias docs="cd ~/files/docs.getdbt.com"
 
 # quick project accessc
 alias deskc="code ~/Desktop"
@@ -60,11 +72,18 @@ alias downc="code ~/Downloads"
 alias filesc="code ~/files"
 alias otherc="code ~/other"
 alias venvsc="code ~/venvs"
+alias corec="code ~/files/dbt-core"
+alias workc="code ~/files/work"
+alias docsc="code ~/files/docs.getdbt.com"
+
 
 # python stuff
 alias venv="python -m venv"
 alias off="deactivate"
 alias main="source ~/venvs/main/bin/activate"
+alias dbt-py="source ~/venvs/dbt-py/bin/activate"
+alias ddb="source ~/venvs/ddb/bin/activate"
+alias psql-ml="source ~/venvs/psql-ml/bin/activate"
 alias python="python3"
 alias pip="pip3"
 alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
