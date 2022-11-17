@@ -1,6 +1,9 @@
 # mac
 .DS_STORE
 
+# vim
+*.swp
+
 # vscode
 .vscode
 
@@ -14,7 +17,16 @@ venvs
 # personal conventions
 out.txt
 out.csv
+out.json
+out2.json
+out3.json
+out4.json
 temp.txt
+temp.ipynb
+
+# dbt
+target/
+dbt_packages/
 
 # logs
 logs
