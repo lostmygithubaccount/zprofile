@@ -1,13 +1,14 @@
 # export PATH
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH" # code
-export PATH="/opt/homebrew/bin:$PATH" # homebrew stuff
 export PATH="/usr/bin:$PATH" # ???
+export PATH="/opt/homebrew/bin:$PATH" # homebrew stuff
 export PATH="/Users/cody/.local/bin:$PATH" # virtualenv
 export PATH="/Users/cody/Library/Python/3.8/bin:$PATH" # pipx
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH" # psql and whatnot
 export PATH="/Applications/SnowSQL.app/Contents/MacOS:$PATH" # snowsql
 
-# temp/to move
+# work stuff
+alias dbtdocs="dbt docs generate && dbt docs serve"
 alias snowsql="snowsql --authenticator externalbrowser > out.txt"
 alias snowsqls="snowsql -c sandbox --authenticator externalbrowser > out.txt"
 alias snowsqlcsv="snowsql --authenticator externalbrowser -o output_format=csv > out.csv"
@@ -18,7 +19,7 @@ alias jsonp="python -m json.tool"
 alias webup="npx docusaurus start"
 
 # fine
-export EDITOR="vi"
+export EDITOR="vim"
 
 # work
 export org="dbt-labs"
@@ -28,7 +29,8 @@ export ORG=$org
 alias exit="exit 0"
 
 # time savers 
-alias v="vi"
+alias v="vim"
+alias vi="vim"
 alias m="tmux"
 alias l="less"
 alias t="tree -FC"
@@ -48,9 +50,11 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # quick mafs 
-alias ali="vi ~/.zprofile"
+alias ali="v ~/.zprofile"
 alias update="source ~/.zprofile && git config --global core.excludesfile ~/.gitignore"
-alias gitignore="vi ~/.gitignore"
+alias gitignore="v ~/.gitignore"
+alias vimrc="v ~/.vimrc"
+alias tmuxc="v ~/.tmux.conf"
 
 # make life easier 
 alias du="du -h -d1"
@@ -79,21 +83,7 @@ alias docs="cd ~/repos/docs.getdbt.com"
 alias scripts="cd ~/repos/scripts"
 alias gists="cd ~/repos/gists"
 alias dotfiles="cd ~/repos/dotfiles"
-
-# quick project accessc
-alias deskc="code ~/Desktop"
-alias docsc="code ~/Documents"
-alias downc="code ~/Downloads"
-alias filesc="code ~/files"
-alias reposc="code ~/repos"
-alias otherc="code ~/other"
-alias venvsc="code ~/venvs"
-alias corec="code ~/repos/dbt-core"
-alias serverc="code ~/repos/dbt-server"
-alias docsc="code ~/repos/docs.getdbt.com"
-alias scriptsc="code ~/repos/scripts"
-alias gistsc="code ~/repos/gists"
-alias dotfilesc="code ~/repos/dotfiles"
+alias zprofile="cd ~/repos/zprofile"
 
 # python stuff
 alias venv="python -m venv"
@@ -118,7 +108,7 @@ alias pip="pip3"
 alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 #alias python="/usr/local/opt/python@3.9/bin/python3"
 #alias pip="/usr/local/opt/python@3.9/bin/pip3"
-#
+
 # testing
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -135,5 +125,3 @@ export pi_user="cody"
 export pi_ip="192.168.1.13"
 
 alias pi="ssh $pi_user@$pi_ip"
-
-

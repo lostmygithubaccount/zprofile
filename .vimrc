@@ -1,4 +1,4 @@
-" vim-bootstrap 2022-11-17 01:11:27
+" vim-bootstrap 2022-11-18 21:44:30
 
 "*****************************************************************************
 "" Vim-Plug core
@@ -10,7 +10,7 @@ else
   let curl_exists=expand('curl')
 endif
 
-let g:vim_bootstrap_langs = "c,go,perl,python,rust"
+let g:vim_bootstrap_langs = "c,go,html,perl,python,rust"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 let g:vim_bootstrap_theme = "molokai"
 let g:vim_bootstrap_frams = ""
@@ -84,6 +84,14 @@ Plug 'ludwig/split-manpage.vim'
 " go
 "" Go Lang Bundle
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+
+
+" html
+"" HTML Bundle
+Plug 'hail2u/vim-css3-syntax'
+Plug 'gko/vim-coloresque'
+Plug 'tpope/vim-haml'
+Plug 'mattn/emmet-vim'
 
 
 " perl
@@ -472,7 +480,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 "" Open current line on GitHub
-nnoremap <Leader>o :.Gbrowse<CR>
+nnoremap <Leader>o :.GBrowse<CR>
 
 "*****************************************************************************
 "" Custom configs
@@ -549,6 +557,11 @@ augroup END
 " ale
 :call extend(g:ale_linters, {
     \"go": ['golint', 'go vet'], })
+
+
+" html
+" for html files, 2 spaces
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
 
 " perl
@@ -643,4 +656,10 @@ else
 endif
 
 " my stuff
-au BufWritePost *.go !gofmt -w %
+:set directory=$HOME/.vim/swps/
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+set expandtab
