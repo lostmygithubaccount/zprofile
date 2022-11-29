@@ -2,6 +2,7 @@
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH" # code
 export PATH="/usr/bin:$PATH" # ???
 export PATH="/opt/homebrew/bin:$PATH" # homebrew stuff
+export PATH="/Users/cody/go/bin:$PATH" # go stuff
 export PATH="/Users/cody/.local/bin:$PATH" # virtualenv
 export PATH="/Users/cody/Library/Python/3.8/bin:$PATH" # pipx
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH" # psql and whatnot
@@ -30,7 +31,7 @@ alias exit="exit 0"
 
 # time savers 
 alias v="vim"
-alias vi="vim"
+alias vi="v"
 alias m="tmux"
 alias l="less"
 alias t="tree -FC"
