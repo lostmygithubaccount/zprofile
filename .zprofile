@@ -65,11 +65,12 @@ alias find="find . -name"
 
 # notes
 alias notes="cd ~/repos/notes"
-alias notesc="code ~/repos/notes"
+alias journal="v ~/repos/notes/journal.md"
 
 # todo
-alias todo="cd ~/repos/todo"
-alias todoc="code ~/repos/todo"
+alias work="cd ~/repos/work"
+alias personal="cd ~/repos/personal"
+alias todo="personal"
 
 # quick project access
 alias desk="cd ~/Desktop"
@@ -90,6 +91,12 @@ alias Runtime="cd ~/repos/Runtime"
 alias R="Runtime"
 alias Core="cd ~/repos/Runtime/Core"
 alias C="Core"
+alias rss="cd ~/repos/rss"
+alias webdev="cd ~/repos/website"
+alias web="webdev"
+alias website="webdev"
+alias W="webdev"
+alias ml="cd ~/repos/p-ml"
 
 # python stuff
 alias python="python3"
@@ -100,32 +107,18 @@ alias venv="python -m venv"
 alias on="source venv/bin/activate"
 alias off="deactivate"
 
-### this is all garbage now
-alias main="source ~/venvs/main/bin/activate"
-alias 13="source ~/venvs/13/bin/activate"
-alias docsdev="source ~/venvs/docsdev/bin/activate"
-alias dbt-py="source ~/venvs/dbt-py/bin/activate"
-alias ddb="source ~/venvs/ddb/bin/activate"
-alias psql-ml="source ~/venvs/psql-ml/bin/activate"
-alias hack="source ~/venvs/hack/bin/activate"
-alias snowy="source ~/venvs/snowy/bin/activate"
-alias qt="source ~/venvs/qt/bin/activate"
-alias ml="source ~/venvs/ml/bin/activate"
-alias adb="source ~/venvs/adb/bin/activate"
-alias debug="source ~/venvs/debug/bin/activate"
-alias ds="source ~/venvs/ds/bin/activate"
-alias sv="source ~/venvs/sv/bin/activate"
-#alias python="/usr/local/opt/python@3.9/bin/python3"
-#alias pip="/usr/local/opt/python@3.9/bin/pip3"
-
 # testing -- idk if this is important
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# postgres?
+alias startpostgres="brew services start postgresql"
+
 # docker stuff
 alias dit="docker run -it --rm"
 alias swagger="dit -p 80:8080 -e SWAGGER_JSON=/app/openapi.yaml -v \$(pwd):/app  swaggerapi/swagger-ui"
+alias dup="docker compose up"
 
 ### kinda old stuff beyond here
 alias dvit="dit --entrypoint bash -v /var/run/docker.sock:/var/run/docker.sock -v /Users/cody/.gitconfig:/users/cody/.gitconfig -v /Users/cody/.ssh:/users/cody/.ssh -v /Users/cody/.config:/users/cody/.config -v /Users/cody/.azure:/users/cody/.azure -v /Users/cody/code:/users/cody/code -v /Users/cody/.vscode:/users/cody/.vscode -v /Users/cody/.vscode-insiders:/users/cody/.vscode-insiders"
