@@ -70,7 +70,19 @@ alias journal="v ~/repos/notes/journal.md"
 # todo
 alias work="cd ~/repos/work"
 alias personal="cd ~/repos/personal"
-alias todo="personal"
+
+HOSTNAME=$(hostname)
+
+case "$HOSTNAME" in
+    *dbt*)
+        TODO="work"
+        ;;
+    *)
+        TODO="personal"
+        ;;
+esac
+
+alias todo="$TODO"
 
 # quick project access
 alias desk="cd ~/Desktop"
