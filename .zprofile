@@ -22,10 +22,6 @@ alias webup="npx docusaurus start"
 # fine
 export EDITOR="vim"
 
-# work
-export org="dbt-labs"
-export ORG=$org
-
 # vscode annoyance
 alias exit="exit 0"
 
@@ -39,6 +35,7 @@ alias tl="tree -L 1 -FC"
 alias tt="tree -L 2 -FC"
 alias ttt="tree -L 3 -FC"
 alias ls="ls -1pG -a"
+alias gs="git status"
 alias gb="git branch" 
 alias ga="git add ."
 alias gA="git add -A"
@@ -67,23 +64,6 @@ alias find="find . -name"
 alias notes="cd ~/repos/notes"
 alias journal="v ~/repos/notes/journal.md"
 
-# todo
-alias work="cd ~/repos/work"
-alias personal="cd ~/repos/personal"
-
-HOSTNAME=$(hostname)
-
-case "$HOSTNAME" in
-    *dbt*)
-        TODO="work"
-        ;;
-    *)
-        TODO="personal"
-        ;;
-esac
-
-alias todo="$TODO"
-
 # quick project access
 alias desk="cd ~/Desktop"
 alias docu="cd ~/Documents"
@@ -109,6 +89,28 @@ alias web="webdev"
 alias website="webdev"
 alias W="webdev"
 alias ml="cd ~/repos/p-ml"
+
+# todo
+alias work="cd ~/repos/work"
+alias personal="cd ~/repos/personal"
+
+# computer-specific stuff
+HOSTNAME=$(hostname)
+
+case "$HOSTNAME" in
+    *dbt*)
+        TODO="work"
+        ORG="dbt-labs"
+        ;;
+    *)
+        TODO="personal"
+        ORG="lostmygithubaccount"
+        ;;
+esac
+
+alias todo="$TODO"
+export ORG="$ORG"
+export org="$ORG"
 
 # python stuff
 alias python="python3"
