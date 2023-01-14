@@ -43,6 +43,7 @@ alias gA="git add -A"
 alias qs="git add . && git commit -m 'qs'"
 alias ss="qs"
 alias gp="git push"
+alias diff="git diff --color-words --no-index"
 
 # navigation
 alias ..="cd .."
