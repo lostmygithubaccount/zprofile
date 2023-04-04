@@ -28,6 +28,8 @@ alias exit="exit 0"
 # time savers 
 alias v="vim"
 alias vi="v"
+alias swps="cd ~/.vim/swps"
+alias swaps="swps"
 alias m="tmux"
 alias l="less"
 alias t="tree -FC"
@@ -42,7 +44,9 @@ alias ga="git add ."
 alias gA="git add -A"
 alias qs="git add . && git commit -m 'qs'"
 alias ss="qs"
+alias gc="git commit -m"
 alias gp="git push"
+alias gl="git log"
 alias diff="git diff --color-words --no-index"
 
 # navigation
@@ -91,6 +95,8 @@ alias web="webdev"
 alias website="webdev"
 alias W="webdev"
 alias ml="cd ~/repos/p-ml"
+alias lq="cd ~/repos/lq"
+alias dbx="cd ~/repos/dbx"
 
 # todo
 alias work="cd ~/repos/work"
