@@ -19,6 +19,7 @@ alias snowsqlcsvs="snowsql -c sandbox --authenticator externalbrowser -o output_
 #alias snowsqlcsv="snowsql -o output_format=csv > out.csv"
 alias jsonp="python -m json.tool"
 alias webup="npx docusaurus start"
+alias ns="nix-shell"
 
 # fine
 export EDITOR="vim"
@@ -27,6 +28,7 @@ export EDITOR="vim"
 alias exit="exit 0"
 
 # time savers 
+alias vim="nvim"
 alias v="vim"
 alias vi="v"
 alias swps="cd ~/.vim/swps"
@@ -38,6 +40,7 @@ alias tl="tree -L 1 -FC"
 alias tt="tree -L 2 -FC"
 alias ttt="tree -L 3 -FC"
 alias ls="ls -1phG -a"
+alias lsl="ls -l"
 alias gs="git status"
 alias gl="git log"
 alias gn="git checkout -b" 
@@ -50,6 +53,8 @@ alias gc="git commit -m"
 alias gp="git push"
 alias gl="git log"
 alias diff="git diff --color-words --no-index"
+alias grep="rg"
+alias top="btop"
 
 # navigation
 alias ..="cd .."
@@ -60,17 +65,16 @@ alias ....="cd ../../.."
 alias ali="v ~/.zprofile"
 alias update="source ~/.zprofile && git config --global core.excludesfile ~/.gitignore"
 alias gitignore="v ~/.gitignore"
-alias vimrc="v ~/.vimrc"
+alias vimrc="v ~/.config/nvim/init.vim"
 alias tmuxc="v ~/.tmux.conf"
 
 # make life easier 
 alias du="du -h -d1"
-alias loc="cloc ."
+alias loc="cloc"
 alias find="find . -name"
 
 # notes
-alias notes="cd ~/repos/notes"
-alias journal="v ~/repos/notes/journal.md"
+alias notes="v ~/repos/work/notes.md"
 
 # quick project access
 alias desk="cd ~/Desktop"
@@ -101,6 +105,7 @@ alias W="webdev"
 alias ml="cd ~/repos/p-ml"
 alias lq="cd ~/repos/lq"
 alias dbx="cd ~/repos/dbx"
+alias CwC="cd ~/repos/CwC"
 
 # todo
 alias work="cd ~/repos/work"
@@ -125,18 +130,20 @@ export ORG="$ORG"
 export org="$ORG"
 
 # python stuff
-alias python="python3"
-alias pip="pip3"
+#alias python="python3"
+#alias pip="pip3"
 alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 
 alias venv="python -m venv"
 alias on="source venv/bin/activate"
 alias off="deactivate"
 
+#alias black="black ."
+
 # testing -- idk if this is important
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
 
 # postgres?
 alias startpostgres="brew services start postgresql"
@@ -156,3 +163,7 @@ export pi_user="cody"
 export pi_ip="192.168.1.13"
 
 alias pi="ssh $pi_user@$pi_ip"
+
+# hack
+export PYTHONDONTWRITEBYTECODE=1
+export DAGSTER_HOME="/Users/cody/.dagster"
