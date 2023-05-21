@@ -10,15 +10,6 @@ export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH" # ps
 export PATH="/Applications/SnowSQL.app/Contents/MacOS:$PATH" # snowsql
 
 # work stuff
-alias dbtdocs="dbt docs generate && dbt docs serve"
-alias snowsql="snowsql --authenticator externalbrowser > out.txt"
-alias snowsqls="snowsql -c sandbox --authenticator externalbrowser > out.txt"
-alias snowsqlcsv="snowsql --authenticator externalbrowser -o output_format=csv > out.csv"
-alias snowsqlcsvs="snowsql -c sandbox --authenticator externalbrowser -o output_format=csv > out.csv"
-#alias snowsql="snowsql > out.txt"
-#alias snowsqlcsv="snowsql -o output_format=csv > out.csv"
-alias jsonp="python -m json.tool"
-alias webup="npx docusaurus start"
 alias ns="nix-shell"
 
 # fine
@@ -55,6 +46,7 @@ alias gl="git log"
 alias diff="git diff --color-words --no-index"
 alias grep="rg"
 alias top="btop"
+alias asdf="rtx"
 
 # navigation
 alias ..="cd .."
@@ -67,10 +59,11 @@ alias update="source ~/.zprofile && git config --global core.excludesfile ~/.git
 alias gitignore="v ~/.gitignore"
 alias vimrc="v ~/.config/nvim/init.vim"
 alias tmuxc="v ~/.tmux.conf"
+alias rtxc="v ~/.config/rtx/config.toml"
 
 # make life easier 
 alias du="du -h -d1"
-alias loc="cloc"
+alias loc="scc"
 alias find="find . -name"
 
 # notes
@@ -84,28 +77,18 @@ alias files="cd ~/files"
 alias repos="cd ~/repos"
 alias other="cd ~/other"
 alias venvs="cd ~/venvs"
-alias core="cd ~/repos/dbt-core"
-alias server="cd ~/repos/dbt-server"
-alias docs="cd ~/repos/docs.getdbt.com"
-alias scripts="cd ~/repos/scripts"
 alias gists="cd ~/repos/gists"
 alias dotfiles="cd ~/repos/dotfiles"
 alias zprofile="cd ~/repos/zprofile"
-alias planes="cd ~/repos/planes"
-alias Runtime="cd ~/repos/Runtime"
-alias R="Runtime"
-alias P="cd ~/repos/project-runtime"
-alias Core="cd ~/repos/Runtime/Core"
-alias C="Core"
-alias rss="cd ~/repos/rss"
 alias webdev="cd ~/repos/website"
 alias web="webdev"
 alias website="webdev"
 alias W="webdev"
-alias ml="cd ~/repos/p-ml"
 alias lq="cd ~/repos/lq"
-alias dbx="cd ~/repos/dbx"
 alias CwC="cd ~/repos/CwC"
+alias ibis="cd ~/repos/ibis"
+alias arrow="cd ~/repos/arrow"
+alias substrait="cd ~/repos/substrait"
 
 # todo
 alias work="cd ~/repos/work"
@@ -115,9 +98,9 @@ alias personal="cd ~/repos/personal"
 HOSTNAME=$(hostname)
 
 case "$HOSTNAME" in
-    *dbt*)
+    *vd*)
         TODO="work"
-        ORG="dbt-labs"
+        ORG="voltrondata"
         ;;
     *)
         TODO="personal"
@@ -167,3 +150,6 @@ alias pi="ssh $pi_user@$pi_ip"
 # hack
 export PYTHONDONTWRITEBYTECODE=1
 export DAGSTER_HOME="/Users/cody/.dagster"
+
+# whatever this does
+eval "$(/opt/homebrew/bin/rtx activate zsh)"

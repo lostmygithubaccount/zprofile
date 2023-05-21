@@ -90,7 +90,8 @@ Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 
 
 " python
-"" Python BundlePlug 'davidhalter/jedi-vim'
+" Python Bundle
+Plug 'davidhalter/jedi-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
