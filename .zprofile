@@ -60,6 +60,7 @@ alias gitignore="v ~/.gitignore"
 alias vimrc="v ~/.config/nvim/init.vim"
 alias tmuxc="v ~/.tmux.conf"
 alias rtxc="v ~/.config/rtx/config.toml"
+alias ipyrc="v ~/.ipython/profile_default/ipython_config.py"
 
 # make life easier 
 alias du="du -h -d1"
@@ -87,6 +88,7 @@ alias W="webdev"
 alias lq="cd ~/repos/lq"
 alias CwC="cd ~/repos/CwC"
 alias ibis="cd ~/repos/ibis"
+alias ex="cd ~/repos/ibis-examples"
 alias arrow="cd ~/repos/arrow"
 alias substrait="cd ~/repos/substrait"
 
@@ -116,6 +118,7 @@ export org="$ORG"
 #alias python="python3"
 #alias pip="pip3"
 alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+alias ipy="ipython"
 
 alias venv="python -m venv"
 alias on="source venv/bin/activate"
