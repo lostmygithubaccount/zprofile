@@ -1,5 +1,6 @@
 # export PATH
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH" # code
+#export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH" # code
+export PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:$PATH" # code
 export PATH="/usr/bin:$PATH" # ???
 export PATH="/opt/homebrew/bin:$PATH" # homebrew stuff
 export PATH="/Users/cody/go/bin:$PATH" # go stuff
@@ -26,6 +27,7 @@ alias swps="cd ~/.vim/swps"
 alias swaps="swps"
 alias m="tmux"
 alias l="less"
+alias tree="tree -I venv"
 alias t="tree -FC"
 alias tl="tree -L 1 -FC"
 alias tt="tree -L 2 -FC"
@@ -47,6 +49,7 @@ alias diff="git diff --color-words --no-index"
 alias grep="rg"
 alias top="btop"
 alias asdf="rtx"
+alias ydl="youtube-dl -f best"
 
 # navigation
 alias ..="cd .."
@@ -78,6 +81,8 @@ alias files="cd ~/files"
 alias repos="cd ~/repos"
 alias other="cd ~/other"
 alias venvs="cd ~/venvs"
+alias pyincludes="cd ~/repos/pyincludes"
+alias startup="v ~/pyincludes/startup.py"
 alias gists="cd ~/repos/gists"
 alias dotfiles="cd ~/repos/dotfiles"
 alias zprofile="cd ~/repos/zprofile"
@@ -87,6 +92,7 @@ alias website="webdev"
 alias W="webdev"
 alias lq="cd ~/repos/lq"
 alias CwC="cd ~/repos/CwC"
+alias cwc="CwC"
 alias ibis="cd ~/repos/ibis"
 alias ex="cd ~/repos/ibis-examples"
 alias arrow="cd ~/repos/arrow"
@@ -120,9 +126,16 @@ export org="$ORG"
 alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias ipy="ipython"
 
+alias di="pip install --upgrade neovim ipython pip"
+
 alias venv="python -m venv"
 alias on="source venv/bin/activate"
 alias off="deactivate"
+
+#export PYTHONBREAKPOINT="pdb.set_trace"
+#export PYTHONPATH="/Users/cody/pyincludes:$PYTHONPATH"
+export PYTHONSTARTUP="/Users/cody/pyincludes/startup.py"
+export PYTHONDONTWRITEBYTECODE=1
 
 #alias black="black ."
 
@@ -151,7 +164,6 @@ export pi_ip="192.168.1.13"
 alias pi="ssh $pi_user@$pi_ip"
 
 # hack
-export PYTHONDONTWRITEBYTECODE=1
 export DAGSTER_HOME="/Users/cody/.dagster"
 
 # whatever this does
