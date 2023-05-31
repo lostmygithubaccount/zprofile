@@ -3,6 +3,7 @@
 export PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:$PATH" # code
 export PATH="/usr/bin:$PATH" # ???
 export PATH="/opt/homebrew/bin:$PATH" # homebrew stuff
+export PATH="/Users/cody/bin:$PATH"
 export PATH="/Users/cody/go/bin:$PATH" # go stuff
 export PATH="/Users/cody/miniforge3/bin:$PATH" # conda
 export PATH="/Users/cody/.local/bin:$PATH" # virtualenv
@@ -14,7 +15,7 @@ export PATH="/Applications/SnowSQL.app/Contents/MacOS:$PATH" # snowsql
 alias ns="nix-shell"
 
 # fine
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # vscode annoyance
 alias exit="exit 0"
@@ -27,7 +28,7 @@ alias swps="cd ~/.vim/swps"
 alias swaps="swps"
 alias m="tmux"
 alias l="less"
-alias tree="tree -I venv"
+alias tree="tree -I venv -I .git"
 alias t="tree -FC"
 alias tl="tree -L 1 -FC"
 alias tt="tree -L 2 -FC"
@@ -97,6 +98,7 @@ alias ibis="cd ~/repos/ibis"
 alias ex="cd ~/repos/ibis-examples"
 alias arrow="cd ~/repos/arrow"
 alias substrait="cd ~/repos/substrait"
+alias test="cd ~/repos/test"
 
 # todo
 alias work="cd ~/repos/work"
@@ -126,7 +128,8 @@ export org="$ORG"
 alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias ipy="ipython"
 
-alias di="pip install --upgrade neovim ipython pip"
+alias di="pip install --upgrade neovim ipython ipykernel pip"
+alias dr="pip install -r requirements.txt"
 
 alias venv="python -m venv"
 alias on="source venv/bin/activate"
@@ -134,7 +137,7 @@ alias off="deactivate"
 
 #export PYTHONBREAKPOINT="pdb.set_trace"
 #export PYTHONPATH="/Users/cody/pyincludes:$PYTHONPATH"
-export PYTHONSTARTUP="/Users/cody/pyincludes/startup.py"
+#export PYTHONSTARTUP="/Users/cody/pyincludes/startup.py"
 export PYTHONDONTWRITEBYTECODE=1
 
 #alias black="black ."
