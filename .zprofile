@@ -13,6 +13,7 @@ export PATH="/Applications/SnowSQL.app/Contents/MacOS:$PATH" # snowsql
 
 # work stuff
 alias ns="nix-shell"
+alias pic="ssh -A piccolo-eng-02"
 
 # fine
 export EDITOR="nvim"
@@ -45,7 +46,9 @@ alias qs="git add . && git commit -m 'qs'"
 alias ss="qs"
 alias gc="git commit -m"
 alias gp="git push"
+alias gpf="git push --force"
 alias gl="git log"
+alias gr="git rebase -i upstream/master"
 alias diff="git diff --color-words --no-index"
 alias grep="rg"
 alias top="btop"
@@ -70,6 +73,7 @@ alias ipyrc="v ~/.ipython/profile_default/ipython_config.py"
 alias du="du -h -d1"
 alias loc="scc"
 alias find="find . -name"
+alias glow="glow -p"
 
 # notes
 alias notes="v ~/repos/work/notes.md"
@@ -95,10 +99,12 @@ alias lq="cd ~/repos/lq"
 alias CwC="cd ~/repos/CwC"
 alias cwc="CwC"
 alias ibis="cd ~/repos/ibis"
+alias docs="cd ~/repos/docs/ibis"
 alias ex="cd ~/repos/ibis-examples"
 alias arrow="cd ~/repos/arrow"
 alias substrait="cd ~/repos/substrait"
 alias test="cd ~/repos/test"
+alias ia="cd ~/repos/ibis-analytics"
 
 # todo
 alias work="cd ~/repos/work"
@@ -118,7 +124,8 @@ case "$HOSTNAME" in
         ;;
 esac
 
-alias todo="$TODO"
+alias todo="v ~/repos/$TODO/todo.md"
+alias todop="glow ~/repos/$TODO/todo.md"
 export ORG="$ORG"
 export org="$ORG"
 
@@ -127,13 +134,18 @@ export org="$ORG"
 #alias pip="pip3"
 alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias ipy="ipython"
+alias eda="ipy -i eda.py"
 
-alias di="pip install --upgrade neovim ipython ipykernel pip"
-alias dr="pip install -r requirements.txt"
+alias di="pip install --upgrade neovim ipython ipykernel nbformat pip"
+alias dr="pip install --upgrade -r requirements.txt"
+
+alias wp="which python"
 
 alias venv="python -m venv"
 alias on="source venv/bin/activate"
 alias off="deactivate"
+alias master="source master/bin/activate"
+alias release="source release/bin/activate"
 
 #export PYTHONBREAKPOINT="pdb.set_trace"
 #export PYTHONPATH="/Users/cody/pyincludes:$PYTHONPATH"

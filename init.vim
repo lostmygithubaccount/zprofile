@@ -53,7 +53,9 @@ Plug 'tomasr/molokai'
 
 "" my stuff?
 Plug 'NoahTheDuke/vim-just'
-
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'f-person/git-blame.nvim'
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -101,6 +103,7 @@ Plug 'racer-rust/vim-racer'
 
 " Rust.vim
 Plug 'rust-lang/rust.vim'
+let g:rustfmt_autosave = 1
 
 " Async.vim
 Plug 'prabirshrestha/async.vim'
