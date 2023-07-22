@@ -10,6 +10,7 @@ export PATH="/Users/cody/.local/bin:$PATH" # virtualenv
 export PATH="/Users/cody/Library/Python/3.8/bin:$PATH" # pipx
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH" # psql and whatnot
 export PATH="/Applications/SnowSQL.app/Contents/MacOS:$PATH" # snowsql
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH" # java
 
 # work stuff
 alias ns="nix-shell"
@@ -77,6 +78,7 @@ alias glow="glow -p"
 
 # notes
 alias notes="v ~/repos/work/notes.md"
+alias temp="v temp.md"
 
 # quick project access
 alias desk="cd ~/Desktop"
@@ -105,6 +107,7 @@ alias arrow="cd ~/repos/arrow"
 alias substrait="cd ~/repos/substrait"
 alias test="cd ~/repos/test"
 alias ia="cd ~/repos/ibis-analytics"
+alias viz="cd ~/repos/viz"
 
 # todo
 alias work="cd ~/repos/work"
@@ -114,7 +117,7 @@ alias personal="cd ~/repos/personal"
 HOSTNAME=$(hostname)
 
 case "$HOSTNAME" in
-    *vd*)
+    *voda*)
         TODO="work"
         ORG="voltrondata"
         ;;
@@ -135,6 +138,7 @@ export org="$ORG"
 alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias ipy="ipython"
 alias eda="ipy -i eda.py"
+alias app="streamlit run app.py"
 
 alias di="pip install --upgrade neovim ipython ipykernel nbformat pip"
 alias dr="pip install --upgrade -r requirements.txt"
