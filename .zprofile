@@ -186,4 +186,8 @@ alias pi="ssh $pi_user@$pi_ip"
 export DAGSTER_HOME="/Users/cody/.dagster"
 
 # whatever this does
-eval "$(/opt/homebrew/bin/rtx activate zsh)"
+#eval "$(/opt/homebrew/bin/rtx activate zsh)"
+if ! command -v rtx &> /dev/null
+then
+    eval "$(/opt/homebrew/bin/rtx activate zsh)"
+fi
