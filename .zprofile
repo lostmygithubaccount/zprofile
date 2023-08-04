@@ -1,7 +1,7 @@
 # export PATH
 #export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH" # code
 export PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:$PATH" # code
-export PATH="/usr/bin:$PATH" # ???
+#export PATH="/usr/bin:$PATH" # ???
 export PATH="/opt/homebrew/bin:$PATH" # homebrew stuff
 export PATH="/Users/cody/bin:$PATH"
 export PATH="/Users/cody/go/bin:$PATH" # go stuff
@@ -11,6 +11,8 @@ export PATH="/Users/cody/Library/Python/3.8/bin:$PATH" # pipx
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH" # psql and whatnot
 export PATH="/Applications/SnowSQL.app/Contents/MacOS:$PATH" # snowsql
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH" # java
+# I hate this
+export PATH="/Users/cody/.local/share/rtx/installs/python/latest/bin:$PATH"
 
 # work stuff
 alias ns="nix-shell"
@@ -107,7 +109,9 @@ alias arrow="cd ~/repos/arrow"
 alias substrait="cd ~/repos/substrait"
 alias test="cd ~/repos/test"
 alias ia="cd ~/repos/ibis-analytics"
+alias ip="cd ~/repos/ibis-presentation"
 alias viz="cd ~/repos/viz"
+alias data="cd ~/repos/data"
 
 # todo
 alias work="cd ~/repos/work"
@@ -138,12 +142,12 @@ export org="$ORG"
 alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias ipy="ipython"
 alias eda="ipy -i eda.py"
-alias app="streamlit run app.py"
 
 alias di="pip install --upgrade neovim ipython ipykernel nbformat pip"
 alias dr="pip install --upgrade -r requirements.txt"
 
 alias wp="which python"
+alias wp3="which python3"
 
 alias venv="python -m venv"
 alias on="source venv/bin/activate"
