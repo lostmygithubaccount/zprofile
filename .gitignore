@@ -30,6 +30,10 @@ temp.py
 temp.txt
 temp.ipynb
 temp.md
+temp.ddb
+test.ddb
+input.md
+output.md
 
 # dbt
 target/

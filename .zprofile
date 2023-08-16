@@ -59,7 +59,9 @@ alias asdf="rtx"
 alias ydl="youtube-dl -f best"
 alias .env="source ~/.env"
 alias dkdcai="source ~/repos/dkdc/dkdcai/bin/activate"
-alias ai="dkdcai; dkdc ai"
+alias icode="codai icode"
+alias ai="icode"
+alias ic="icode"
 
 # navigation
 alias ..="cd .."
@@ -116,7 +118,6 @@ alias ia="cd ~/repos/ibis-analytics"
 alias ip="cd ~/repos/ibis-presentation"
 alias viz="cd ~/repos/viz"
 alias data="cd ~/repos/data"
-alias chat="cd ~/repos/chat"
 
 # todo
 alias work="cd ~/repos/work"
